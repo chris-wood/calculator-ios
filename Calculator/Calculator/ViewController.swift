@@ -22,7 +22,7 @@ class ViewController: UIViewController
     {
         let digit = sender.currentTitle!; // ! unwrap the optional (crashes if nil)
         println("Pressed \(digit)");
-        if (!enteringNumber) {
+        if (display.text == "0") {
             self.display.text = digit;
             self.enteringNumber = true;
         } else {
@@ -30,30 +30,34 @@ class ViewController: UIViewController
         }
     }
     
-    func initializeComputeChain(sender: UIButton)
-    {
+    @IBAction func pressEquals(sender: UIButton) {
         if (!hasFirstOperand) {
-            self.operand1 = sender.currentTitle!.toInt()!;
+            var title = display.text!;
+            self.operand1 = title.toInt()!;
             hasFirstOperand = true;
         } else {
             self.operand2 = self.operand1;
-            self.operand1 = sender.currentTitle!.toInt()!;
+            self.operand1 = display.text!.toInt()!;
         }
-    }
-    
-    @IBAction func pressEquals(sender: UIButton) {
+        
+        println("\(operand1) and \(operand2)");
+        
         if (hasFirstOperand) {
             switch (op) {
                 case "add":
+                    println("add");
                     display.text = String(operand1 + operand2);
                     break;
                 case "sub":
+                    println("sub");
                     display.text = String(operand1 - operand2);
                     break;
                 case "div":
+                    println("div");
                     display.text = String(operand1 / operand2);
                     break;
                 case "mul":
+                    println("mul");
                     display.text = String(operand1 * operand2);
                     break;
                 default:
@@ -64,30 +68,64 @@ class ViewController: UIViewController
     
     @IBAction func pressAdd(sender: UIButton)
     {
-        initializeComputeChain(sender);
+        if (!hasFirstOperand) {
+            var title = display.text!;
+            self.operand1 = title.toInt()!;
+            hasFirstOperand = true;
+            display.text = "0";
+        } else {
+            self.operand2 = self.operand1;
+            self.operand1 = display.text!.toInt()!;
+            display.text = String(operand1 + operand2);
+        }
+        
         op = "add";
-        display.text = String(operand1 + operand2);
     }
     
     @IBAction func pressSubtract(sender: UIButton)
     {
-        initializeComputeChain(sender);
+        if (!hasFirstOperand) {
+            var title = display.text!;
+            self.operand1 = title.toInt()!;
+            hasFirstOperand = true;
+            display.text = "0";
+        } else {
+            self.operand2 = self.operand1;
+            self.operand1 = display.text!.toInt()!;
+            display.text = String(operand1 - operand2);
+        }
+        
         op = "sub";
-        display.text = String(operand1 - operand2);
     }
     
     @IBAction func pressDivide(sender: UIButton)
     {
-        initializeComputeChain(sender);
+        if (!hasFirstOperand) {
+            var title = display.text!;
+            self.operand1 = title.toInt()!;
+            hasFirstOperand = true;
+            display.text = "0";
+        } else {
+            self.operand2 = self.operand1;
+            self.operand1 = display.text!.toInt()!;
+            display.text = String(operand1 / operand2);
+        }
         op = "div";
-        display.text = String(operand1 / operand2);
     }
     
     @IBAction func pressMultiply(sender: UIButton)
     {
-        initializeComputeChain(sender);
+        if (!hasFirstOperand) {
+            var title = display.text!;
+            self.operand1 = title.toInt()!;
+            hasFirstOperand = true;
+            display.text = "0";
+        } else {
+            self.operand2 = self.operand1;
+            self.operand1 = display.text!.toInt()!;
+            display.text = String(operand1 * operand2);
+        }
         op = "mul";
-        display.text = String(operand1 * operand2);
     }
     
     @IBAction func pressCLR(sender: UIButton) {

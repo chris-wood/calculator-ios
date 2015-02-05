@@ -130,7 +130,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="804-d9-AC9"/>
                                     <action selector="pressAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="78z-l4-tqb"/>
                                 </connections>
                             </button>
@@ -141,7 +140,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vQh-vi-Ofg"/>
                                     <action selector="pressEquals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lO2-iH-31y"/>
                                 </connections>
                             </button>
@@ -152,7 +150,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ihj-Ko-fh4"/>
                                     <action selector="pressSubtract:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UoA-c0-reU"/>
                                 </connections>
                             </button>
@@ -163,7 +160,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vEM-O0-oV5"/>
                                     <action selector="pressDivide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p4W-PX-ST2"/>
                                 </connections>
                             </button>
@@ -174,7 +170,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oiK-kw-gOW"/>
                                     <action selector="pressMultiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UMT-SD-nJ8"/>
                                 </connections>
                             </button>
@@ -185,7 +180,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="appendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8bi-Vg-4RZ"/>
                                     <action selector="pressCLR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dzB-hX-bjJ"/>
                                 </connections>
                             </button>
